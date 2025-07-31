@@ -20,7 +20,10 @@
     "build:types": "tsc",
     "start:all": "concurrently \"npm run start\" \"npm run start:header\" \"npm run start:body\"",
     "start:header": "cd apps/header && npm run serve:single-spa:header",
-    "start:body": "cd apps/body && npm run serve:single-spa:body"
+    "start:body": "cd apps/body && npm run serve:single-spa:body",
+    "build:all": "concurrently \"npm run build:*\" \"npm run build:header\" \"npm run build:body\"",
+    "build:header": "cd apps/header && npm run build:single-spa:header",
+    "build:body": "cd apps/body && npm run build:single-spa:body"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
